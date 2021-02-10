@@ -9,6 +9,7 @@ public class Attendance extends BasePage{
     private By punch = new By.ByXPath("//*[@id='menu_attendance_punchIn']");
     private By fieldNote = new By.ByXPath("//*[@id='note']");
     private By btnIn = new By.ByXPath("//*[@id='btnPunch']");
+    private By btnOut = new By.ByXPath("//*[@id='btnPunch']");
 
     public Attendance(WebDriver driver) { super(driver); }
 
@@ -27,5 +28,9 @@ public class Attendance extends BasePage{
 
     public void clickButtonIn() throws InterruptedException{
         clickButton(btnIn);
+    }
+
+    public void clickButtonOut()throws InterruptedException{
+        clickButton(btnOut);
     }
 }

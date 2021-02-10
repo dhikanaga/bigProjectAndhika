@@ -14,7 +14,7 @@ public class AuthTest {
     }
 
     @Test
-    public void userSussesfullyLogin() throws InterruptedException, IOException {
+    public void adminSussesfullyLogin() throws InterruptedException, IOException {
         Utils.openWebsite(Utils.getUrl());
         Thread.sleep(2000);
         Auth auth = new Auth(driver);
@@ -26,7 +26,7 @@ public class AuthTest {
     }
 
     @Test
-    public void userFailedLogin() throws InterruptedException, IOException {
+    public void adminFailedLogin() throws InterruptedException, IOException {
         Utils.openWebsite(Utils.getUrl());
         Thread.sleep(2000);
         Auth auth = new Auth(driver);

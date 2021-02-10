@@ -1,5 +1,6 @@
 package com.sekolahqa.pages;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -31,6 +32,16 @@ public class BasePage {
 
     public static void hoverWebElement (By by) throws InterruptedException{
         WebElement target = driver.findElement(by);
+    }
+
+    public static void uploadFile (By by) throws InterruptedException{
+        WebElement uploadElement = driver.findElement(by);
+        uploadElement.sendKeys("D:\\Java\\Program\\bigProject\\assets\\dummy.png");
+    }
+
+    public static void verifyText (By by, String text) throws InterruptedException{
+        String bodyText = driver.findElement(by).getText();
+        Assert.assertEquals(text,bodyText);
     }
 }
 
