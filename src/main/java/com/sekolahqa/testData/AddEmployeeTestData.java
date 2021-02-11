@@ -5,6 +5,8 @@ import com.sekolahqa.pages.Auth;
 import com.sekolahqa.pages.Leave;
 import org.openqa.selenium.WebDriver;
 
+import java.io.IOException;
+
 public class AddEmployeeTestData {
     private AddEmployee add;
 
@@ -12,7 +14,7 @@ public class AddEmployeeTestData {
         add = new AddEmployee(driver);
     }
 
-    public void successAddEmployee(String firstName, String middleName, String lasName) throws InterruptedException{
+    public void successAddEmployee(String firstName, String middleName, String lasName) throws InterruptedException {
         add.userGoToAddEmployeePage();
         add.inputFirstName(firstName);
         add.inputMiddleName(middleName);

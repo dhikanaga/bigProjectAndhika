@@ -3,6 +3,8 @@ package com.sekolahqa.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import java.io.IOException;
+
 public class AddEmployee extends BasePage{
     private By menuPIM = new By.ByXPath("//*[@id='menu_pim_viewPimModule']");
     private By menuAddEmployee = new By.ByXPath("//*[@id='menu_pim_addEmployee']");
@@ -38,7 +40,7 @@ public class AddEmployee extends BasePage{
         inputText(lastName,last);
     }
 
-    public void uploadPhotograph()throws InterruptedException{
+    public void uploadPhotograph() throws InterruptedException {
         uploadFile(photograph);
     }
 

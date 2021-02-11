@@ -33,4 +33,8 @@ public class Auth extends BasePage{
         clickButton(pnlWelcome);
         clickButton(btnLogout);
     }
+
+    public String getErrorText() throws InterruptedException {
+        return getText(errorMessage);
+    }
 }

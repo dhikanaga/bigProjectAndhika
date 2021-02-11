@@ -7,8 +7,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+
 public class BasePage {
     private static WebDriver driver;
+    private static Properties properties = new Properties();
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
@@ -36,7 +43,7 @@ public class BasePage {
         WebElement target = driver.findElement(by);
     }
 
-    public static void uploadFile (By by) throws InterruptedException{
+    public static void uploadFile (By by) throws InterruptedException {
         WebElement uploadElement = driver.findElement(by);
         uploadElement.sendKeys("D:\\Java\\Program\\bigProject\\assets\\dummy.png");
     }
@@ -59,6 +66,11 @@ public class BasePage {
     public void clearTextBox(By by) throws InterruptedException{
         WebElement textBox = driver.findElement(by);
         textBox.clear();
+    }
+
+    public String getText(By by)throws InterruptedException{
+        String text = driver.findElement(by).getText();
+        return text;
     }
 }
 
