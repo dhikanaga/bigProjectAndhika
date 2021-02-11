@@ -20,7 +20,7 @@ public class AddEmployeeTest {
     }
 
     @Test
-    public void successfulyAddEmployee()throws InterruptedException,IOException{
+    public void successfullyAddEmployee()throws InterruptedException,IOException{
         Utils.openWebsite(Utils.getUrl());
         Thread.sleep(2000);
         LoginTestData login = new LoginTestData(driver);

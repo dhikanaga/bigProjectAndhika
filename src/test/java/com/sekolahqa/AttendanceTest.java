@@ -45,7 +45,7 @@ public class AttendanceTest {
     public void employeeSuccesfullyPunchIn()throws IOException, InterruptedException{
         Utils.openWebsite(Utils.getUrl());
         LoginTestData loginTestData = new LoginTestData(driver);
-        loginTestData.successLogin("DhikaTest", "s3Kol4HQA!*");
+        loginTestData.successLogin("Dhika1", "s3Kol4HQA!*");
         Attendance attendance = new Attendance(driver);
         attendance.clickTime();
         attendance.clickPunch();
@@ -58,10 +58,12 @@ public class AttendanceTest {
     public void employeeSuccesfullyPunchOut() throws IOException, InterruptedException{
         Utils.openWebsite(Utils.getUrl());
         LoginTestData loginTestData = new LoginTestData(driver);
-        loginTestData.successLogin("DhikaTest", "s3Kol4HQA!*");
+        loginTestData.successLogin("Dhika1", "s3Kol4HQA!*");
         PunchInTestData punchIn = new PunchInTestData(driver);
         punchIn.succesPunchIn();
         Attendance attendance = new Attendance(driver);
+        attendance.clickTime();
+        attendance.clickPunch();
         attendance.inputNote("Testing punch out");
         attendance.clickButtonOut();
         Utils.closeWebsite();

@@ -14,6 +14,7 @@ public class PunchInTestData {
 
     public void succesPunchIn() throws InterruptedException{
         attendance.clickTime();
+        Thread.sleep(2000);
         attendance.clickPunch();
         attendance.inputNote("Testing punch in");
         attendance.clickButtonIn();

@@ -2,8 +2,10 @@ package com.sekolahqa.pages;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 public class BasePage {
     private static WebDriver driver;
@@ -42,6 +44,21 @@ public class BasePage {
     public static void verifyText (By by, String text) throws InterruptedException{
         String bodyText = driver.findElement(by).getText();
         Assert.assertEquals(text,bodyText);
+    }
+
+    public static void selectOption(By by, String option) throws InterruptedException{
+        Select dropDown = new Select(driver.findElement(by));
+        dropDown.selectByVisibleText(option);
+    }
+
+    public void enterInTextBox(By by) throws InterruptedException{
+        WebElement textBox = driver.findElement(by);
+        textBox.sendKeys(Keys.ENTER);
+    }
+
+    public void clearTextBox(By by) throws InterruptedException{
+        WebElement textBox = driver.findElement(by);
+        textBox.clear();
     }
 }
 
