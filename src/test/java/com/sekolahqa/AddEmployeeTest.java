@@ -20,7 +20,7 @@ public class AddEmployeeTest {
     private static ExtentTest test;
     String firstname= "Dhika";
     String middlename= "Test";
-    String lastname= "2";
+    String lastname= "1";
 
 
     WebDriver driver = Utils.getDriver();

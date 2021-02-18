@@ -17,7 +17,7 @@ import java.io.IOException;
 public class LeaveTest {
     String firstname= "Dhika";
     String middlename= "Test";
-    String lastname= "1";
+    String lastname= "10";
     String typeOfLeave= "Cuti";
     String balance = "5.00";
 
@@ -50,6 +50,7 @@ public class LeaveTest {
         leave.adminSelectLeaveType(typeOfLeave);
         leave.adminInputLeaveBalance(balance);
         leave.clickButtonSave();
+        Thread.sleep(3000);
         Utils.closeWebsite();
     }
 
@@ -67,6 +68,7 @@ public class LeaveTest {
         leave.employeeSetToDate(toDate);
         leave.employeeInputComment(firstname+lastname+" new Leave");
         leave.clickApplyButton();
+        Utils.closeWebsite();
     }
 
     @Test

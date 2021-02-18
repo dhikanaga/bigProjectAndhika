@@ -13,7 +13,7 @@ public class sendEmailReport {
         attachment.setDisposition(EmailAttachment.ATTACHMENT);
         attachment.setDescription(desc);
         attachment.setName(name);
-        HtmlEmail email = new HtmlEmail();
+        MultiPartEmail email = new MultiPartEmail();
         email.setHostName("smtp.gmail.com");
         email.setSmtpPort(465);
         email.setAuthenticator(new DefaultAuthenticator("andhikabigproject@gmail.com", "dhikadhika123"));
